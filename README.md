@@ -174,4 +174,4 @@ QMAKE=/usr/local/Cellar/qt5/5.4.0/bin/qmake bundle install
 Then run `rspec` and you should see the tests have passed.
 
 # Credits
-- Forked from [Fast Rich Client Rails Development With Webpack and the ES6 Transpiler](http://www.railsonmaui.com/blog/2014/10/02/integrating-webpack-and-the-es6-transpiler-into-an-existing-rails-project/) ([justin@railsonmaui.com](mailto:justin@railsonmaui.com))
+- Forked from [React Webpack Rails Tutorial](https://github.com/justin808/react-webpack-rails-tutorial) based on tutorial: [Fast Rich Client Rails Development With Webpack and the ES6 Transpiler](http://www.railsonmaui.com/blog/2014/10/02/integrating-webpack-and-the-es6-transpiler-into-an-existing-rails-project/)
