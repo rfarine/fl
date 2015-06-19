@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-rails-tutorial",
-  "version": "1.1.1",
-  "description": "Code from the React Webpack tutorial.",
+  "name": "fl",
+  "version": "1.0",
+  "description": "you'll see",
   "main": "server.js",
   "engines": {
     "node": "0.12.2"
@@ -13,18 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/justin808/react-webpack-rails-tutorial.git"
+    "url": "https://github.com/rfarine/fl.git"
   },
   "keywords": [
     "react",
-    "tutorial",
-    "comment",
-    "example"
+    "fun"
   ],
-  "author": "justin808",
+  "author": "rfarine",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/justin808/react-webpack-rails-tutorial/issues"
+    "url": "https://github.com/rfarine/fl/issues"
   },
-  "homepage": "https://github.com/justin808/react-webpack-rails-tutorial"
+  "homepage": "https://github.com/rfarine/fl"
 }
