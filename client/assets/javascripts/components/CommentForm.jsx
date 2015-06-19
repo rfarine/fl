@@ -16,12 +16,6 @@ const CommentForm = React.createClass({
     ajaxSending: React.PropTypes.bool.isRequired
   },
 
-  getInitialState() {
-    return {
-      formMode: 0
-    };
-  },
-
   handleSelect(selectedKey) {
     this.setState({formMode: selectedKey});
   },
@@ -80,76 +74,11 @@ const CommentForm = React.createClass({
     );
   },
 
-  formStacked() {
-    return (
-      <div>
-        <hr/>
-        <form className='commentForm form' onSubmit={this.handleSubmit}>
-          <Input type='text' label='Name' placeholder='Your Name' ref='author'
-                 value={this.props.formData.author}
-                 onChange={this.handleChange} disabled={this.props.ajaxSending}/>
-          <Input type='textarea' label='Text' placeholder='Say something...' ref='text'
-                 value={this.props.formData.text}
-                 onChange={this.handleChange} disabled={this.props.ajaxSending}/>
-          <input type='submit' className='btn btn-primary' value='Post'
-                 disabled={this.props.ajaxSending}/>
-        </form>
-      </div>
-    );
-  },
-
-  formInline() {
-    return (
-      <div>
-        <hr/>
-        <form className='commentForm form' onSubmit={this.handleSubmit}>
-          <Input label='Inline Form' wrapperClassName='wrapper'>
-            <Row>
-              <Col xs={3}>
-                <input type='text' className='form-control' placeholder='Your Name'
-                       ref='inlineAuthor'
-                       value={this.props.formData.author} onChange={this.handleChange}
-                       disabled={this.props.ajaxSending}/>
-              </Col>
-              <Col xs={8}>
-                <input type='text' className='form-control' placeholder='Say something...'
-                       ref='inlineText'
-                       value={this.props.formData.text} onChange={this.handleChange}
-                       disabled={this.props.ajaxSending}/>
-              </Col>
-              <Col xs={1}>
-                <input type='submit' className='btn btn-primary' value='Post'
-                       disabled={this.props.ajaxSending}/>
-              </Col>
-            </Row>
-          </Input>
-        </form>
-      </div>
-    );
-  },
-
   render() {
     let inputForm;
-    switch (this.state.formMode) {
-      case 0:
-        inputForm = this.formHorizontal();
-        break;
-      case 1:
-        inputForm = this.formStacked();
-        break;
-      case 2:
-        inputForm = this.formInline();
-        break;
-      default:
-        throw `Unknown form mode: ${this.state.formMode}.`;
-    }
+    inputForm = this.formHorizontal();
     return (
       <div>
-        <Nav bsStyle="pills" activeKey={this.state.formMode} onSelect={this.handleSelect}>
-          <NavItem eventKey={0}>Horizontal Form</NavItem>
-          <NavItem eventKey={1}>Stacked Form</NavItem>
-          <NavItem eventKey={2}>Inline Form</NavItem>
-        </Nav>
         {inputForm}
       </div>
     );

@@ -8,19 +8,6 @@ $(function onLoad() {
       React.render(
         <div>
           <CommentBox url='comments.json' pollInterval={5000}/>
-
-          <div className='container'>
-            <a href='http://www.railsonmaui.com'>
-              <h3 className='open-sans-light'>
-                <div className='logo'/>
-                Example of styling using image-url and Open Sans Light custom font
-              </h3>
-            </a>
-            <a href='https://twitter.com/railsonmaui'>
-              <div className='twitter-image'/>
-              Rails On Maui on Twitter
-            </a>
-          </div>
         </div>,
         document.getElementById('content')
       );
